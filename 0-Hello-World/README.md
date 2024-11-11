@@ -1,0 +1,11 @@
+# Getting started
+- https://code.visualstudio.com/docs/csharp/get-started
+- Install "C# Dev Kit" in VS Code. Following the instructions and it will also install the .NET SDK for you.
+- Now typing this in the command line should give you the .NET version: `dotnet --version`
+- Create a new folder, and inside it, type `dotnet new console` to create a new .NET console app.
+  - You can see all options by typing `dotnet new`
+- New files are created:
+  - `xxxx.cs` <-- this is your programme
+  - `xxxx.csproj` <-- this is some sort of project config
+  - The remaining files are build artefacts and can be deleted / gitignored
+- To run the project, type `dotnet run`, which compiles & run the project
