@@ -30,26 +30,3 @@ var mySecondString = "Bye!"; // Implied `string` type
 // `var` must be initialised with value (otherwise god knows what type it is?)
 // var noValue; <-- this will throw error
 string noValue; // <-- this is fine, and can be reassigned later
-
-
-
-
-/**
- * Strings
- */
- // string literals in C# are in DOUBLE QUOTES ("") only; single quotes (') are for characters
-// C# can do string concatenation with `+`, which also result in a string:
-string myFriend = "Alice";
-Console.WriteLine("Hello, " + myFriend + "!");
-// C# has string interpolations:
-Console.WriteLine($"Hello again, {myFriend}!");
-
-/****
- String manipulations
- ****/
-// String.Trim: trim leading & trailing white-spaces. If you pass character(s) into the method, it will remove only those characters.
-// Strings in C# are immutable (as in most other languages) so all these methods will return a new string instead of changing the original string
-string myFriendWithSpaces = "        Bob                ".Trim();
-Console.WriteLine($"Hello, {myFriendWithSpaces}!"); // Hello, Bob!
-
-// String.Replace, .Contains, .StartsWith, .EndsWith, .ToUpper, .ToLower
