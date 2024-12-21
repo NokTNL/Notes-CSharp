@@ -25,7 +25,8 @@ namespace Utils {
         // C# allows you to have multiple methods in a class bearing the exact same name; the only criteria is that they have a different parameter list
         // It will decide which one is the correct one based on the list of parameters used at the point of call
         public static void SayHi() {
-            Console.WriteLine("Hi Mom!");
+            // You can even call an overload INSIDE another overload
+            SayHi("Mom");
         }
         public static void SayHi(string name) {
             Console.WriteLine($"Hi {name}!");
