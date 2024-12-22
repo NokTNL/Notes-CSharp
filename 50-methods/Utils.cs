@@ -35,6 +35,7 @@ namespace Utils {
          * Optional parameters
          */
         // Alternatively, you can define a function with optional parameters to avoid overloading
+        // This is done by providing a default value to a parameter
         public static void SmartSayHi(string name = "Barbie") {
             Console.WriteLine($"Hi {name}!");
         }
