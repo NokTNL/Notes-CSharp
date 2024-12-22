@@ -1,5 +1,5 @@
 namespace Utils {
-    internal class NumberUtils {
+    class NumberUtils {
         /*
         * Methods
         */
@@ -18,7 +18,7 @@ namespace Utils {
         public static int AddTwoIntShort(int a, int b) => a + b;
     }
 
-    internal class ConsoleUtils {
+    class ConsoleUtils {
         /*
          * Method overloading
          */
@@ -40,15 +40,3 @@ namespace Utils {
         }
     }
 }
-
-// If you only have one namespace in a file, you can use FILE-SCOPED NAMESPACE, and simply put all the class declarations under it (instead of inside brackets).
-// It makes it way more readable, but you cannot have more than one namespaces if you use this.
-
-// namesapce Foo;
-//
-// class Bar
-// {
-//      public static void Baz () {}
-// }
-//
-// namespace Extra; <--- NOT ALLOWED

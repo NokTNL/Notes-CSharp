@@ -1,4 +1,4 @@
-﻿// We want to use a class from another file. This is how you would "import" a NAMESPACE from another file in order to use its contents
+﻿// We want to use a class from another file. In C#, you group code in namespaces and you "use" the namespaces. (More on namespaces later)
 // More info about methods in `Utils.cs`
 using Utils;
 
