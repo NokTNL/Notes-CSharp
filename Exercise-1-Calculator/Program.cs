@@ -1,28 +1,15 @@
-﻿// This will evaluate an expression up to 2 numbers with one operator, e.g. "12.5 / 6.0"
-using Utils;
+﻿// This app will evaluate an algebraic expression in order and not respsecting priority
+// e.g. 2.3 + 3.5 / 2 = 5.8 / 2 = 2.9
+using Exercise_1_Calculator;
 
 while (true) {
+    Calculator calculator = new();
+
     try {
-        Console.Write("Type in an expression to calculate: ");
-        var rawInput = Console.ReadLine();
-        var subStringsFromInput = StringOp.SplitToNumbers(rawInput);
-        var result = double.Parse(subStringsFromInput[0]);
-        if (subStringsFromInput.Length > 1) {
-            var secondNum = double.Parse(subStringsFromInput[1]);
-            if (rawInput.Contains('+')) {
-                result += secondNum;
-            }
-            else if (rawInput.Contains('-')) {
-                result -= secondNum;
-            }
-            else if (rawInput.Contains('*')) {
-                result *= secondNum;
-            }
-            else if (rawInput.Contains('/')) {
-                result /= secondNum;
-            }
-        }
-        Console.WriteLine($"{rawInput} equals {result}");
+        Console.Write("Type in an expression to calculate (accepts +, -, *, /, ^): ");
+        calculator.RawInput = Console.ReadLine()!;
+        calculator.Calculate();
+        Console.WriteLine($"{calculator.RawInput} equals {calculator.Result}");
     } catch {
         Console.WriteLine("Invalid input.");
     }
