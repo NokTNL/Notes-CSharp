@@ -7,9 +7,9 @@ while (true) {
 
     try {
         Console.Write("Type in an expression to calculate (accepts +, -, *, /, ^): ");
-        calculator.RawInput = Console.ReadLine()!;
+        calculator.Input = Console.ReadLine()!;
         calculator.Calculate();
-        Console.WriteLine($"{calculator.RawInput} equals {calculator.Result}");
+        Console.WriteLine($"{calculator.Input} equals {calculator.Result}");
     } catch {
         Console.WriteLine("Invalid input.");
     }

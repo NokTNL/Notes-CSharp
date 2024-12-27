@@ -1,8 +1,8 @@
 namespace Exercise_1_Calculator;
 
-class Calculator
+public class Calculator
 {
-    public string RawInput = "";
+    public string Input = "";
     private double _result = 0;
     public double Result => _result;
 
@@ -37,10 +37,10 @@ class Calculator
     }
     public double Calculate()
     {
-        string rawInputWithoutSpace = RawInput.Replace(" ", "");
+        string inputWithoutSpace = Input.Replace(" ", "");
         string lastNumberString = "";
         char lastOperator = '\0';
-        foreach (char currentChar in rawInputWithoutSpace)
+        foreach (char currentChar in inputWithoutSpace)
         {
             if (char.IsDigit(currentChar) || currentChar == '.')
             {
@@ -52,7 +52,7 @@ class Calculator
                 lastNumberString = "";
                 lastOperator = currentChar;
             }
-            else throw new Exception();
+            else throw new FormatException();
         }
         ApplyOperation(lastNumberString, lastOperator);
         
