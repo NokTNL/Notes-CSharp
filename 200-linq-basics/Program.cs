@@ -15,7 +15,7 @@ List<MyRecord> users = [
 
 // LINQ has two syntaxes:
 // - QUERY syntax: surround the query with (). You can then immediately turn it into of list or array
-// e.g. This is give all objects back
+// e.g. this will return the same list (`select` MAPS each object in the list into a new object, but it simply returns the object untouched here>
 List<MyRecord> allUsers = (from user in users select user).ToList();
 // - METHOD syntax: you call the query directly on the list as methods, then pass in a lambda to process it
 allUsers = users.Select(user => user).ToList();
@@ -34,13 +34,13 @@ foreach (var userName in allUserNames)
     Console.WriteLine(userName);
 }
 
-// You can even "map" the data to new types of objects
+// You can map the data to new types of objects in `select`
 var userNameCharacterCounts = (from user in users
-                            select new { // Using anonymous type here so we don't need to define a new class / record
-                                user.Id, // Using "inferred member name" here
-                                NameCharacterCount = user.Name.Length
-                            }
-                         ).ToList();
+                                select new { // Using anonymous type here so we don't need to define a new class / record
+                                    user.Id, // Using "inferred member name" here
+                                    NameCharacterCount = user.Name.Length
+                                }
+                              ).ToList();
 userNameCharacterCounts = users.Select(user => new {
                             user.Id,
                             NameCharacterCount = user.Name.Length

@@ -7,13 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-Strings", "10-Strings\10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "200-linq-basics", "200-linq-basics\200-linq-basics.csproj", "{2ADA1AF7-C1A1-43A7-8892-12CFB388BCCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "210-linq-order-filter", "210-linq-order-filter\210-linq-order-filter.csproj", "{4E3C17BC-C154-415C-B35C-7A1D3F9AF662}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8CDD3D65-CE50-43FE-A1D0-A1A302866E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +23,12 @@ Global
 		{2ADA1AF7-C1A1-43A7-8892-12CFB388BCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ADA1AF7-C1A1-43A7-8892-12CFB388BCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ADA1AF7-C1A1-43A7-8892-12CFB388BCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E3C17BC-C154-415C-B35C-7A1D3F9AF662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E3C17BC-C154-415C-B35C-7A1D3F9AF662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E3C17BC-C154-415C-B35C-7A1D3F9AF662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E3C17BC-C154-415C-B35C-7A1D3F9AF662}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
