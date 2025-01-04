@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "210-linq-order-filter", "21
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220-linq-find-items", "220-linq-find-items\220-linq-find-items.csproj", "{4F41A53E-0E6C-4F3C-8F5F-B2430F8DC409}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "300-async-await-basic", "300-async-await-basic\300-async-await-basic.csproj", "{AB6BBDB0-DAA1-4DFC-8092-A64A9E2F0399}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4F41A53E-0E6C-4F3C-8F5F-B2430F8DC409}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F41A53E-0E6C-4F3C-8F5F-B2430F8DC409}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F41A53E-0E6C-4F3C-8F5F-B2430F8DC409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6BBDB0-DAA1-4DFC-8092-A64A9E2F0399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6BBDB0-DAA1-4DFC-8092-A64A9E2F0399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6BBDB0-DAA1-4DFC-8092-A64A9E2F0399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6BBDB0-DAA1-4DFC-8092-A64A9E2F0399}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
