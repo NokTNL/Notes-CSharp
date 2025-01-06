@@ -37,7 +37,7 @@ foreach (var userName in allUserNames)
 // You can map the data to new types of objects in `select`
 var userNameCharacterCounts = (from user in users
                                 select new { // Using anonymous type here so we don't need to define a new class / record
-                                    user.Id, // Using "inferred member name" here
+                                    user.Id,
                                     NameCharacterCount = user.Name.Length
                                 }
                               ).ToList();

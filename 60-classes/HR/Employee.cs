@@ -30,19 +30,22 @@ namespace Extra; <--- NOT ALLOWED
 namespace _60_classes.HR;
 
 class Employee {
-    public string firstName;
-    public string lastName;
+    public string FirstName = "";
+    public string LastName = "";
 
     // Syntax of constructor in C# is using the same name as the constructor
     // Note that its parameters cannot have the same name as any fields
     public Employee(string first, string last)
     {
-        firstName = first;
-        lastName = last;
+        FirstName = first;
+        LastName = last;
     }
 
+    // Constructors can be overloaded 
+    public Employee() {}
+
     public string GetFullName () {
-        return $"{firstName} {lastName}";
+        return $"{FirstName} {LastName}";
     }
 }
 
