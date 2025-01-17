@@ -30,22 +30,48 @@ namespace Extra; <--- NOT ALLOWED
 namespace _60_classes.HR;
 
 class Employee {
+    /*
+     * Fields
+     */
+    // Fields are simply variables belonging to a class
+    // Naming conventions:
     public string FirstName = "";
-    public string LastName = "";
+    private string _lastName = "";
 
     // Syntax of constructor in C# is using the same name as the constructor
     // Note that its parameters cannot have the same name as any fields
     public Employee(string first, string last)
     {
         FirstName = first;
-        LastName = last;
+        _lastName = last;
     }
 
     // Constructors can be overloaded 
     public Employee() {}
 
     public string GetFullName () {
-        return $"{FirstName} {LastName}";
+        return $"{FirstName} {_lastName}";
+    }
+
+    /*
+     * Properties
+     */
+    // Properties are getter / setter encapsulation for a field
+    // This is the more common way of defining a memeber in a class
+    public string ExampleProperty {get; set;} // This is the simplest way to define a property (which you can both read and write)
+    
+    // If you want to add some extra logic, you can use either a lambda or a usual method notation
+    // For example this is how you back the `_lastName` private field:
+    public string LastName {
+        get => _lastName;
+        set => _lastName = value; // Inside a setter you can get the assigned value using the `value`
+    }
+
+    // You can add modifiers to the getter / setter, e.g. if you want to make it readonly
+    public string LastNameWithRestictions
+    {
+        get;
+        private set; // This will make it readonly outside the class but writable inside the class
     }
 }
 

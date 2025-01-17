@@ -2,9 +2,13 @@ namespace Exercise_1_Calculator;
 
 public class Calculator
 {
-    public string Input = "";
+    public string Input { get; set; } = "";
     private double _result = 0;
-    public double Result => _result;
+    public double Result
+    {
+        get => _result;
+        private set => _result = value;
+    }
 
     private void ApplyOperation (string numberString, char operatorChar)
     {

@@ -4,5 +4,5 @@
 Coord coord1 = new(1.23, 4.56);
 Coord coord2 = new(1.23, 4.56);
 Console.WriteLine(coord1.X); // 1.23
-// coord1.X = 123; // Error, readonlt
+// coord1.X = 123; // Error, readonly
 Console.WriteLine(coord1 == coord2); // True
