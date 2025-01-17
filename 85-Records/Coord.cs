@@ -4,7 +4,7 @@ namespace _85_Records;
 // Shortest way to define a record, using primary constructor:
 record Coord(double X, double Y);
 // Under the hood, PUBLIC GET-ONLY PROPERTIES are generated for every parameter in the primary constructor
-record CoordUnderTheHood(double X, double Y)
+class CoordUnderTheHood(double X, double Y)
 {
     public double X { get; init; } = X; // `init` is a setter that can only be called during instantiation (incl. both contructor and object initialiser)
     public double Y { get; init; } = Y;
