@@ -11,8 +11,21 @@ Console.WriteLine(@"Hi!
     This has extra white spaces
 This starts from a new line
 And backslashes are not escaping anything \n\t\\
-And this is how you display a double quote: ""
-");
+And this is how you display a double quote: """); // """ --> a literal double quote + the closing quote
+// However, all white spaces we use for indentation will also be included, which may not be desirable.
+// RAW STRING LITERAL (from C# 11) is even better in this case. It is defined by AT LEAST 3 consecutive double quoutes and ends with a matching number of quotes
+// - It ignores white space after the starting qoutes
+// - The CLOSING double qoute defines the start of a line, which helps with indentations
+// - You can use more than 3 double quotes if you want
+// - You can make it interpolate by adding at least one `$` at the start; you need to add a matching number of {} to insert values
+Console.WriteLine($$""""
+  
+  Now showcasing raw literal strings:
+  I can put double quotes inside it as long as it is fewer than the matching quotes """
+  Now interpolationg a number: {{3}}
+
+  """"
+);
 // Unicode escape characters    
 Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!"); // こんにちは World!
 
@@ -31,7 +44,8 @@ Console.WriteLine($@"Hello, {myFriend} is trying to...
 /*
  * String comparison
  */
-// Strings can be directly compared with a `==` operator in C#
+// Strings are REFERENCE types, but they have value type semantics. 
+// That means they can be directly compared with a `==` operator in C#
 // Alternatively you can use String.Equals(string)
 Console.WriteLine($"\"abc\" == \"abc\" is {"abc" == "abc"}");
 Console.WriteLine($"\"abc\".Equals(\"abc\") is {"abc".Equals("abc")}");

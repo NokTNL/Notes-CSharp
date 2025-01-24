@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "400-JSON", "400-JSON\400-JS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "85-Records", "85-Records\85-Records.csproj", "{3139D4FA-AA37-4D02-8D2F-6882C0CF9A9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "70-value-reference-type", "70-value-reference-type\70-value-reference-type.csproj", "{923B3FF3-DCA4-4A76-AAED-4AED70E6FF1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "410-Regex", "410-Regex\410-Regex.csproj", "{DE36CABA-AFD3-435C-A3DF-17C5308E0D3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{3139D4FA-AA37-4D02-8D2F-6882C0CF9A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3139D4FA-AA37-4D02-8D2F-6882C0CF9A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3139D4FA-AA37-4D02-8D2F-6882C0CF9A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{923B3FF3-DCA4-4A76-AAED-4AED70E6FF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923B3FF3-DCA4-4A76-AAED-4AED70E6FF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923B3FF3-DCA4-4A76-AAED-4AED70E6FF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923B3FF3-DCA4-4A76-AAED-4AED70E6FF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE36CABA-AFD3-435C-A3DF-17C5308E0D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE36CABA-AFD3-435C-A3DF-17C5308E0D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE36CABA-AFD3-435C-A3DF-17C5308E0D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE36CABA-AFD3-435C-A3DF-17C5308E0D3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 ﻿// In C#, primitves (int, double, char, ...) are VALUE types. They are stored as the values as-is in the stack, and the values are copied every time they are passed around.
 // Classes and Strings are REFERENCE types. They are stored as a pointer in the stack, which points to the actual object stored in the heap, and only the reference are copied and passed around during assignment.
 // - Even though strings are stored as references, it behaves like a de facto value type.
-//   This is because when a new string value is assigned to a variable, the reference stored assigned in the variable changes (instead of mutating the value the reference is pointing to, because strings are immutable).
+//   When a new string value is assigned to a variable, the reference stored assigned to the variable changes (instead of mutating the value the reference is pointing to, because strings are immutable).
 
 // When used as parameters, primitives are by values by default, i.e. copied of the original values are passed in.
 // You can force it to be passed BY REFERENCE so you can mutate the original value, using the `ref` keyword
