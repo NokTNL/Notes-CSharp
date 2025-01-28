@@ -3,38 +3,33 @@ namespace Exercise_1_Calculator;
 public class Calculator
 {
     public string Input { get; set; } = "";
-    private double _result = 0;
-    public double Result
-    {
-        get => _result;
-        private set => _result = value;
-    }
+    public double Result { get; private set; } = 0;
 
     private void ApplyOperation (string numberString, char operatorChar)
     {
         double currentNumber = double.Parse(numberString);
         if (operatorChar == '\0')
         {
-            _result = currentNumber;
+            Result = currentNumber;
         }
         else
         {
             switch(operatorChar)
             {
                 case '+':
-                    _result += currentNumber;
+                    Result += currentNumber;
                     break;
                 case '-':
-                    _result -= currentNumber;
+                    Result -= currentNumber;
                     break;
                 case '*':
-                    _result *= currentNumber;
+                    Result *= currentNumber;
                     break;
                 case '/':
-                    _result /= currentNumber;
+                    Result /= currentNumber;
                     break;
                 case '^':
-                    _result = Math.Pow(_result, currentNumber);
+                    Result = Math.Pow(Result, currentNumber);
                     break;
             }
         }
@@ -60,6 +55,6 @@ public class Calculator
         }
         ApplyOperation(lastNumberString, lastOperator);
         
-        return _result;
+        return Result;
     } 
 }

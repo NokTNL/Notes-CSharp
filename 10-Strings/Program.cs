@@ -74,3 +74,26 @@ if (int.TryParse("abc", out int parsedInt)) { // `out` means where you want to o
 } else {
   Console.WriteLine("Parsing \"abc\" to an int unsuccessful");
 }
+
+/**
+ * Check if a string is null, empty or whitespaces only
+ */
+ // An empty string is just "", or the value string.Empty
+Console.WriteLine(string.IsNullOrEmpty("")); // True
+Console.WriteLine(string.IsNullOrWhiteSpace("     \t ")); // True, note that this includes empty strings as well
+
+/**
+ * String splitting
+ */
+// You can use String.Split to split a string into an array of SUBSTRINGS.
+// The method accepts an array of Char's or String's, i.e. unlimited number of strings / chars you want to split with
+string[] substrings = "abracadabra".Split('a', 'r');
+Console.WriteLine("Splitting \"abracadabra\":");
+foreach (string substring in substrings)
+{
+  Console.Write($"\"{substring}\", "); // Interestingly it gives "", "b", "", "c", "d", "b", "", ""
+  // 1. Think of it like there are two empty "" surrouding the string
+  // 2. When 'r' and 'a' are next to each other, the split between them is also ""
+  // You can use the StringSplitOptions.RemoveEmptyEntries options to eliminate that
+}
+Console.WriteLine();
