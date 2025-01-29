@@ -86,14 +86,29 @@ Console.WriteLine(string.IsNullOrWhiteSpace("     \t ")); // True, note that thi
  * String splitting
  */
 // You can use String.Split to split a string into an array of SUBSTRINGS.
-// The method accepts an array of Char's or String's, i.e. unlimited number of strings / chars you want to split with
-string[] substrings = "abracadabra".Split('a', 'r');
-Console.WriteLine("Splitting \"abracadabra\":");
-foreach (string substring in substrings)
+// This is best used for cases where strings are delimited by one / several characters as "columns", like a CSV
+// The method accepts an array of Char's, i.e. unlimited number of strings / chars you want to split with
+string abracadabra = "abracadabra ";
+char[] charDelimiters = {'a','r'};
+string[] substrings = abracadabra.Split(charDelimiters);
+ReportSubstrings(abracadabra, substrings);  //"", "b", "", "c", "d", "b", "", " "; the empty strings are "empty columns"; it also includes whitespaces
+
+// You can use the StringSplitOptions.RemoveEmptyEntries and/or TrimEntries options to eliminate that
+substrings = abracadabra.Split(charDelimiters, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+ReportSubstrings(abracadabra, substrings); // "b", "c", "d", "b"
+
+// You can also provide a string[] as delimiters (but the typing is a bit weird and you must provide splitting options)
+string[] stringDelimiters = {"ra", "a"};
+substrings = abracadabra.Split(stringDelimiters, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+ReportSubstrings(abracadabra, substrings); // "b", "c", "d", "b"
+
+static void ReportSubstrings(string originalString, string[] substrings)
 {
-  Console.Write($"\"{substring}\", "); // Interestingly it gives "", "b", "", "c", "d", "b", "", ""
-  // 1. Think of it like there are two empty "" surrouding the string
-  // 2. When 'r' and 'a' are next to each other, the split between them is also ""
-  // You can use the StringSplitOptions.RemoveEmptyEntries options to eliminate that
+  Console.WriteLine($"Splitting \"{originalString}\":");
+  foreach (string substring in substrings)
+    {
+        Console.Write($"\"{substring}\", "); 
+
+    }
+  Console.WriteLine();
 }
-Console.WriteLine();
