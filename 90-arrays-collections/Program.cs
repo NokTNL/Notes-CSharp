@@ -4,13 +4,18 @@
  * Lists (preferred)
  */
 // Lists are one of the many "Collections" provided by .NET (not C# built-in, unlike arrays)
-List<int> myListOfInts = [1, 2, 3, 4]; // `[]` is called the "collection expression"; use it to assign a list of values to any IEnumerable (e.g. List and arrays)
-// We can also use the "Collection initialiser" syntax
-myListOfInts = new List<int> {1, 2, 3, 4};
-// or simply
-myListOfInts = new {1, 2, 3, 4};
+// You can use the "Collection Intialiser" syntax `{}` to assign values, right after the constructor call
+List<int> myListOfInts = new() { 1, 2, 3, 4 };
 
-List<int> myEmptyListOfInts = []; // Empty list 
+// From C# 12, you can also use the "Collection Expression" syntax `[]` to "collect values" for a list
+// It can be used anywhere that accepts the collection initialiser `{}`, and Arrays (see below)
+List<int> myListOfInts3 = [1, 2, 3, 4];
+                                        
+// Empty list
+List<int> myEmptyListOfInts = new();
+// Using []:
+myEmptyListOfInts = [];
+
 // List items can be retrieved by index
 Console.WriteLine($"myListOfInts[2]: {myListOfInts[2]}"); // 3
 // You can then call these methods / fields:
@@ -25,7 +30,10 @@ Console.WriteLine($"myListOfInts[2]: {myListOfInts[2]}"); // 3
  * Arrays
  */
 // To declare an array:
-int[] myFirstArray = new {1, 2, 3, 4}; // You can also use [] instead of {} from C# 12
+int[] myFirstArray = {1, 2, 3, 4};
+// Using []
+int[] mySecondArray = [1, 2, 3, 4];
+
 // Remember that these arrays are of fixed length, and (unfortunately) the compiler is not smart enough to pick it up if you try to access out-of-range items
 // Console.WriteLine(myFirstArray[6]); // <-- This throws RUNTIME error
 

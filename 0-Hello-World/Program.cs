@@ -27,7 +27,7 @@ Console.WriteLine(true);  // boolean literal; the value is `true` but printed as
 // To declare a variable in C#, you put the variable type first.
 // The naming convention is to use camelCase
 string myFirstString = "Hi!";
-// You can also define IMPLICITLY TYPED variables, which is telling the compiler to apply the type of the literal value assigned to it
+// You can also define IMPLICITLY TYPED variables, which is telling the compiler to apply the type of the value assigned to it
 // However, the type CANNOT be changed once initialised
 var mySecondString = "Bye!"; // Implied `string` type
 // `var` must be initialised with value (otherwise god knows what type it is?)
